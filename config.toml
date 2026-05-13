@@ -10,11 +10,12 @@ minify_html = true
 build_search_index = false
 taxonomies = [{ name = "tags", feed = true }]
 
+# More syntax hightlighting themes: https://www.getzola.org/documentation/getting started/configuration/#syntax highlighting
+
 [markdown]
-highlight_code = true
-highlight_theme = "visual-studio-dark"
-# More syntax highlighting themes: https://www.getzola.org/documentation/getting-started/configuration/#syntax-highlighting
-smart_punctuation = true
+smart_punctuation = false
+[markdown.highlighting]
+theme = "vitesse-light"
 
 [extra]
 author = "Miguel Pimentel"
