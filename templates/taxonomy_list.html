@@ -1,14 +1,20 @@
 {% extends "base.html" %}
 
+{% block title %}{{ taxonomy.name | capitalize }} | {{ config.title }}{% endblock title %}
+
+{% block meta_description %}
+<meta name="description" content="{{ taxonomy.name | capitalize }} on {{ config.title }}" />
+{% endblock meta_description %}
+
 {% block content %}
 <section class="tags">
   <section class="tags-header">
-    <h2 class="tags-header-title">Tags</h2>
+    <h1 class="tags-header-title">{{ taxonomy.name | capitalize }}</h1>
     <section class="tags-header-line"></section>
   </section>
   <section class="tags-clouds">
     {% for term in terms -%}
-    <a href="#{{ term.name }}">#{{ term.name }}</a>
+    <a href="#{{ term.name }}">#{{ term.name }} ({{ term.page_count }})</a>
     {%- endfor %}
   </section>
 
@@ -19,13 +25,12 @@
       <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
       <line x1="7" y1="7" x2="7.01" y2="7"></line>
     </svg>
-    <h2 class="tags-item-label"><a href="{{ term.permalink | safe }}">#{{ term.name }}</a></h2>
+    <h2 class="tags-item-label"><a href="{{ term.permalink | safe }}">#{{ term.name }} ({{ term.page_count }})</a></h2>
 
     {% for page in term.pages -%}
     <a class="tags-post" href="{{ page.permalink | safe }}">
       <section>
         <span class="tags-post-title">{{ page.title | truncate(length=30) }}</span>
-        {# <span class="tags-post-title">{{ page.title }}</span> #}
         <section class="tags-post-line"></section>
       </section>
       <span class="tags-post-meta">

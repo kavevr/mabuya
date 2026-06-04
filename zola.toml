@@ -3,33 +3,39 @@ title = "Mabuya"
 description = "Mabuya is a minimal Zola theme for building light and SEO-ready blogs. Put your work front and center with Mabuya as the base of your project."
 author = "Miguel Pimentel"
 
+default_language = "en"
 compile_sass = true
 generate_feeds = true
 feed_filenames = ["rss.xml", "atom.xml"]
 minify_html = true
 build_search_index = false
+exclude_paginated_pages_in_sitemap = "all"
 taxonomies = [{ name = "tags", feed = true }]
-
-# More syntax hightlighting themes: https://www.getzola.org/documentation/getting started/configuration/#syntax highlighting
 
 [markdown]
 smart_punctuation = false
+
 [markdown.highlighting]
 theme = "vitesse-light"
+
+[link_checker]
+external_level = "warn"
 
 [extra]
 author = "Miguel Pimentel"
 email = "contact@miguelpimentel.do"
 github = "https://github.com/semanticdata"
-timeformat = "%B %e, %Y"                   # e.g. June 14, 2021
+timeformat = "%B %e, %Y"
 
 [[extra.menu]]
 name = "Archive"
-url = "/"
+kind = "section"
+path = "@/_index.md"
 
 [[extra.menu]]
 name = "Tags"
-url = "tags"
+kind = "taxonomy"
+taxonomy = "tags"
 
 [extra.footer]
-info = 'Powered by <a href="https://www.getzola.org" target="_blank">Zola</a> and <a href="https://github.com/semanticdata/mabuya">Mabuya</a>.'
+info = 'Powered by <a href="https://www.getzola.org" target="_blank" rel="noreferrer noopener">Zola</a> and <a href="https://github.com/semanticdata/mabuya" target="_blank" rel="noreferrer noopener">Mabuya</a>.'

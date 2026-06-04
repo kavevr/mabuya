@@ -23,7 +23,6 @@
     ? "light"
     : "dark";
   const currentTheme = localStorage.getItem("theme") ?? userPref;
-  const syntaxTheme = document.querySelector("#theme-link");
 
   if (currentTheme) {
     document.documentElement.setAttribute("saved-theme", currentTheme);

@@ -2,17 +2,25 @@
 
 <header>
   <section class="nav-container">
-    <a class="nav-title" href="{{ config.base_url | safe }}">
-      <h2>{{ config.title | default(value="Mabuya")}}</h2>
+    <a class="nav-title" href="{{ get_url(path='@/_index.md') }}">
+      <h2>{{ config.title | default(value="Mabuya") }}</h2>
     </a>
     <nav>
       <ul>
         {% if config.extra.menu %}
         {% for menu in config.extra.menu %}
-        <li><a href="{{ get_url(path=menu.url) | safe }}">{{ menu.name }}</a></li>
-        {% endfor %} {% else %}
-        <li><a href="{{ config.base_url | safe }}">Archive</a></li>
-        <li><a href="{{ get_url(path='tags') | safe }}">Tags</a></li>
+        {% if menu.kind == "taxonomy" %}
+        {% set menu_taxonomy = get_taxonomy(kind=menu.taxonomy) %}
+        {% set menu_url = menu_taxonomy.permalink %}
+        {% else %}
+        {% set menu_url = get_url(path=menu.path) %}
+        {% endif %}
+        <li><a href="{{ menu_url | safe }}">{{ menu.name }}</a></li>
+        {% endfor %}
+        {% else %}
+        {% set fallback_taxonomy = get_taxonomy(kind='tags') %}
+        <li><a href="{{ get_url(path='@/_index.md') }}">Archive</a></li>
+        <li><a href="{{ fallback_taxonomy.permalink | safe }}">Tags</a></li>
         {% endif %}
       </ul>
     </nav>

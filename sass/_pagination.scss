@@ -14,9 +14,13 @@
 
   .top {
     @include variables.transition(all 0.3s ease-out);
+    background: none;
+    border: 0;
     color: variables.$default-color;
     font-family: variables.$sans-serif;
     font-size: 1.1rem;
+    padding: 0;
+    appearance: none;
     opacity: 0.6;
 
     &:hover {

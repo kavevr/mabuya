@@ -58,7 +58,7 @@ While working on the theme, I have added new functionality and made many quality
 
 ## 🚀 Quick Start
 
-Before using the theme, you need to install [Zola](https://www.getzola.org/documentation/getting-started/installation/) ≥ v0.18.0. After which you'll need to:
+Before using the theme, you need to install [Zola](https://www.getzola.org/documentation/getting-started/installation/) ≥ v0.22.1. After which you'll need to:
 
 1. Clone the repository:
 
@@ -82,7 +82,7 @@ For more detailed instructions, visit the [documentation](https://www.getzola.or
 
 ## 🎨 Customization
 
-You can change the configuration, templates and content yourself. Refer to the [config.toml](config.toml), and [templates](templates) for ideas. In most cases you only need to modify the contents of [config.toml](config.toml) to customize the appearance of your blog. Make sure to visit the Zola [Documentation](https://www.getzola.org/documentation/getting-started/overview/).
+You can change the configuration, templates and content yourself. Refer to the [zola.toml](zola.toml), and [templates](templates) for ideas. In most cases you only need to modify the contents of [zola.toml](zola.toml) to customize the appearance of your blog. Make sure to visit the Zola [Documentation](https://www.getzola.org/documentation/getting-started/overview/).
 
 Adding custom CSS is as easy as adding your styles to [sass/_custom.scss](sass/_custom.scss). This is made possible because SCSS files are backwards compatible with CSS. This means you can type normal CSS code into a SCSS file and it will be valid.
 

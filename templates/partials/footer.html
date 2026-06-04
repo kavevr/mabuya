@@ -1,10 +1,10 @@
 <footer>
   <span class="copyright">
     {%- if config.extra.footer -%}
-    © 2024 {{ config.extra.author | default(value="Miguel Pimentel")}}. {{ config.extra.footer.info |
+    © {{ config.extra.author | default(value="Miguel Pimentel") }}. {{ config.extra.footer.info |
     default(value='Powered by Zola and Mabuya.') | safe }}
     {%- else -%}
-    © 2024 Miguel Pimentel. Powered by <a href="https://www.getzola.org"><u>Zola</u></a> and <a
+    © Miguel Pimentel. Powered by <a href="https://www.getzola.org"><u>Zola</u></a> and <a
       href="https://github.com/semanticdata/mabuya">Mabuya</a>.
     {%- endif -%}
   </span>

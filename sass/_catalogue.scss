@@ -38,4 +38,15 @@
     display: block;
     width: 2rem;
   }
+
+  &-excerpt {
+    margin: 0.5rem 0 0
+  }
+
+  &-meta {
+    color: variables.$default-shade;
+    font-family: variables.$serif-secondary;
+    font-size: 0.9rem;
+    margin: 0.35rem 0 0;
+  }
 }

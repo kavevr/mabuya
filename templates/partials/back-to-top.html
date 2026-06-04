@@ -1,6 +1,14 @@
-<a class="top" id="goToTopBtn" onclick="goToTop()" title="Go to top">Top</a>
+<button class="top" id="goToTopBtn" type="button" title="Go to top">Top</button>
 <script>
-    function goToTop() {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+  document.addEventListener("DOMContentLoaded", () => {
+    const goToTopBtn = document.getElementById("goToTopBtn");
+
+    if (!goToTopBtn) {
+      return;
     }
+
+    goToTopBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  });
 </script>

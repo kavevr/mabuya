@@ -6,9 +6,21 @@
       %e, %Y")) }}</time>
     <h1 class="catalogue-title">{{ page.title }}</h1>
     <section class="catalogue-line"></section>
-    <p>
-      {%- if page.description -%} {{ page.description | safe }} {% else -%} {{
-      page.content | striptags | truncate(length=280) | safe }} {%- endif -%}
+    <p class="catalogue-excerpt">
+      {%- if page.summary -%}
+      {{ page.summary | safe }}
+      {%- elif page.description -%}
+      {{ page.description | safe }}
+      {%- else -%}
+      {{ page.content | striptags | truncate(length=280) | safe }}
+      {%- endif -%}
+    </p>
+    <p class="catalogue-meta">
+      {{ page.reading_time }} min read
+      {%- if page.updated -%}
+      · Updated {{ page.updated | date(format=config.extra.timeformat | default(value="%B
+      %e, %Y")) }}
+      {%- endif -%}
     </p>
   </section>
 </a>

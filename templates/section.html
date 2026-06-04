@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% import "macros.html" as macros %}
+
+{% block title %}
+{% if section.title %}
+{{ section.title }} | {{ config.title }}
+{% else %}
+{{ config.title }}
+{% endif %}
+{% endblock title %}
+
+{% block meta_description %}
+<meta name="description" content="{{ section.description | default(value=config.description) }}" />
+{% endblock meta_description %}
+
+{% block content %}
+{% if section.title %}
+<h1>{{ section.title }}</h1>
+{% endif %}
+
+{% if section.description %}
+<p>{{ section.description }}</p>
+{% endif %}
+
+{% if section.content %}
+{{ section.content | safe }}
+{% endif %}
+
+{% if paginator is defined %}
+{% set pages = paginator.pages %}
+{% else %}
+{% set pages = section.pages %}
+{% endif %}
+{% include "partials/paginator.html" %}
+{% endblock content %}

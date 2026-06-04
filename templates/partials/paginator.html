@@ -1,10 +1,13 @@
-{% if paginator.pages %}
+{% import "macros.html" as macros %}
+
+{% if pages %}
 <section class="catalogue">
-  {% for page in paginator.pages -%}
+  {% for page in pages -%}
   {{ macros::page(page=page) }}
   {%- endfor %}
 </section>
 
+{% if paginator is defined %}
 <section class="pagination">
   {% if paginator.previous -%}
   <a href="{{ paginator.previous | safe }}" class="left arrow">&#8592;</a>
@@ -18,4 +21,5 @@
   <a href="{{ paginator.next | safe }}" class="right arrow">&#8594;</a>
   {%- endif %}
 </section>
+{% endif %}
 {% endif %}
