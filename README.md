@@ -1,17 +1,19 @@
 <div align="center">
 <h1>🦎 Mabuya</h1>
-  <img src="https://img.shields.io/github/languages/code-size/semanticdata/mabuya" />
-  <img src="https://img.shields.io/github/repo-size/semanticdata/mabuya" />
-  <img src="https://img.shields.io/github/commit-activity/t/semanticdata/mabuya" />
-  <img src="https://img.shields.io/github/last-commit/semanticdata/mabuya" />
+  <img src="https://img.shields.io/github/languages/code-size/kavevr/mabuya" />
+  <img src="https://img.shields.io/github/repo-size/kavevr/mabuya" />
+  <img src="https://img.shields.io/github/commit-activity/t/kavevr/mabuya" />
+  <img src="https://img.shields.io/github/last-commit/kavevr/mabuya" />
   <img src="https://img.shields.io/website/https/mabuya.vercel.app.svg" />
 <br />
 
 [Mabuya](https://mabuya.vercel.app/) is a lightweight [Zola](https://www.getzola.org) theme for creating fast, SEO-optimized blogs.  
 Put your work front and center with Mabuya as the base of your project.
 
+> **Note**: This is a customized fork by [@kavevr](https://github.com/kavevr). For the original project, visit [@semanticdata/mabuya](https://github.com/semanticdata/mabuya).
+
 <a href="https://mabuya.vercel.app/">
-<img src="https://img.shields.io/badge/Check out the Demo-F0E68C?style=for-the-badge&link=https://semanticdata.github.io/nullboard/" alt="demo" height="32px"; /></a>
+<img src="https://img.shields.io/badge/Check out the Demo-F0E68C?style=for-the-badge&link=https://mabuya.vercel.app/" alt="demo" height="32px"; /></a>
 
 <br />
 <br />
@@ -63,7 +65,7 @@ Before using the theme, you need to install [Zola](https://www.getzola.org/docum
 1. Clone the repository:
 
 ```bash
-git clone git@github.com:semanticdata/mabuya.git
+git clone git@github.com:kavevr/mabuya.git
 ```
 
 2. Change directory into new cloned repository:
@@ -82,7 +84,7 @@ For more detailed instructions, visit the [documentation](https://www.getzola.or
 
 ## 🎨 Customization
 
-You can change the configuration, templates and content yourself. Refer to the [zola.toml](zola.toml), and [templates](templates) for ideas. In most cases you only need to modify the contents of [zola.toml](zola.toml) to customize the appearance of your blog. Make sure to visit the Zola [Documentation](https://www.getzola.org/documentation/getting-started/overview/).
+You can change the configuration, templates and content yourself. Refer to the [zola.toml](zola.toml), and [templates](templates) for ideas. In most cases you only need to modify the contents of [zola.toml](zola.toml) to customize the appearance of your blog. Make sure to visit the [Zola Documentation](https://www.getzola.org/documentation/).
 
 Adding custom CSS is as easy as adding your styles to [sass/_custom.scss](sass/_custom.scss). This is made possible because SCSS files are backwards compatible with CSS. This means you can type normal CSS code into a SCSS file and it will be valid.
 
@@ -126,7 +128,7 @@ steps:
 
 ## 🚩 Reporting Issues
 
-We use GitHub Issues as the official bug tracker for **Mabuya**. Please search [existing issues](https://github.com/semanticdata/mabuya/issues). It’s possible someone has already reported the same problem. If your problem or idea is not addressed yet, [open a new issue](https://github.com/semanticdata/mabuya/issues/new).
+We use GitHub Issues as the official bug tracker for **Mabuya**. Please search [existing issues](https://github.com/kavevr/mabuya/issues). It's possible someone has already reported the same problem. If your problem or idea is not addressed yet, open a new issue.
 
 ## 🤝 Contributing
 
@@ -134,7 +136,7 @@ We'd love your help! Please see [CONTRIBUTING](./CONTRIBUTING.md) and our [Code 
 
 ## 💜 Acknowledgements
 
-Mabuya is a *fork* of [Tale](https://github.com/aaranxu/tale-zola), which itself is a *port* of the Jekyll theme [Tale](https://github.com/chesterhow/tale) which is now archived.
+Mabuya is a *fork* of [Mabuya](https://github.com/semanticdata/mabuya) by [@semanticdata](https://github.com/semanticdata), which itself is a *fork* of [Tale](https://github.com/aaranxu/tale-zola) by [@aaranxu](https://github.com/aaranxu). The original [Tale](https://github.com/chesterhow/tale) Jekyll theme is now archived.
 
 The icons used throughout the site are kindly provided by [UXWing](https://uxwing.com/license/). Read their [license](https://uxwing.com/license/).
 
@@ -142,4 +144,6 @@ The icons used throughout the site are kindly provided by [UXWing](https://uxwin
 
 Source code in this repository is available under the [MIT License](./LICENSE).
 
-[^1]: *Mabuya hispaniolae*'s conservation status is *Critically endangered, possibly extinct*.  
+**Copyright (c) 2023 aaranxu, 2023-2025 semanticdata, 2026 kavevr**
+
+[^1]: *Mabuya hispaniolae*'s conservation status is *Critically endangered, possibly extinct*.
