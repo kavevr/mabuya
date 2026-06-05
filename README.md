@@ -144,6 +144,4 @@ The icons used throughout the site are kindly provided by [UXWing](https://uxwin
 
 Source code in this repository is available under the [MIT License](./LICENSE).
 
-**Copyright (c) 2023 aaranxu, 2023-2025 semanticdata, 2026 kavevr**
-
 [^1]: *Mabuya hispaniolae*'s conservation status is *Critically endangered, possibly extinct*.
