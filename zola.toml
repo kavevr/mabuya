@@ -1,5 +1,5 @@
 base_url = "https://mabuya.vercel.app/"
-title = "Mabuya"
+title = "kavevr's blog"
 description = "Mabuya is a minimal Zola theme for building light and SEO-ready blogs. Put your work front and center with Mabuya as the base of your project."
 author = "Miguel Pimentel"
 
@@ -16,21 +16,27 @@ taxonomies = [{ name = "tags", feed = true }]
 smart_punctuation = false
 
 [markdown.highlighting]
-theme = "vitesse-light"
+theme = "github-dark"
 
 [link_checker]
 external_level = "warn"
 
 [extra]
-author = "Miguel Pimentel"
+author = "kavevr"
 email = "contact@miguelpimentel.do"
-github = "https://github.com/semanticdata"
+github = "https://github.com/kavevr"
 timeformat = "%B %e, %Y"
 
 [[extra.menu]]
-name = "Archive"
+name = "Post"
 kind = "section"
 path = "@/_index.md"
+
+[[extra.menu]]
+name = "About"
+kind = "section"
+path = "@/about/_index.md"
+
 
 [[extra.menu]]
 name = "Tags"
