@@ -7,13 +7,12 @@
   <img src="https://img.shields.io/website/https/mabuya.vercel.app.svg" />
 <br />
 
-[Mabuya](https://mabuya.vercel.app/) is a lightweight [Zola](https://www.getzola.org) theme for creating fast, SEO-optimized blogs.  
-Put your work front and center with Mabuya as the base of your project.
+[Mabuya](https://mabuya.vercel.app/) 是一个轻量级的 [Zola](https://www.getzola.org) 主题，用于创建快速、SEO 优化的博客。
 
-> **Note**: This is a customized fork by [@kavevr](https://github.com/kavevr). For the original project, visit [@semanticdata/mabuya](https://github.com/semanticdata/mabuya).
+> **Note**: 这是由 [@kavevr](https://github.com/kavevr) 维护的定制版本。原始项目请访问 [@semanticdata/mabuya](https://github.com/semanticdata/mabuya)。
 
 <a href="https://mabuya.vercel.app/">
-<img src="https://img.shields.io/badge/Check out the Demo-F0E68C?style=for-the-badge&link=https://mabuya.vercel.app/" alt="demo" height="32px"; /></a>
+<img src="https://img.shields.io/badge/查看演示-F0E68C?style=for-the-badge&link=https://mabuya.vercel.app/" alt="demo" height="32px"; /></a>
 
 <br />
 <br />
@@ -21,127 +20,63 @@ Put your work front and center with Mabuya as the base of your project.
 <img alt="screenshot" src="./screenshot.png" />
 </div>
 
-## ⓘ Background
+## ✨ 特性
 
-While searching for themes, I stumbled upon [Tale](https://github.com/aaranxu/tale-zola). Unfortunately, the last update was on December, 2021. Soon after, I decided to fork the project and add my own touches to it.
+- ✅ 简洁博客
+- ✅ 分页
+- ✅ 标签系统
+- ✅ 深色主题切换
+- ✅ 返回顶部按钮
 
-The name **Mabuya** comes from the [Mabuya hispaniolae](https://en.wikipedia.org/wiki/Mabuya_hispaniolae?useskin=vector), a possibly extinct[^1] species of skink endemic to the Dominican Republic, my home country.
+## 📈 优化
 
-## ✨ Features
+- 重构样式表，提高可维护性
+- 添加深色主题和切换功能
+- 完整的响应式设计
+- 性能优化与无障碍支持
+- 完美的 [PageSpeed Insights](https://developers.google.com/speed/docs/insights/v5/about) 评分
 
-- ✅ Simple Blog
-- ✅ Pagination
-- ✅ Tags
-- ✅ Dark Theme and Toggle
-- ✅ Back-to-Top Button
-
-## 📈 Improvements
-
-While working on the theme, I have added new functionality and made many quality of life improvements. Here's a short list:
-
-- Refactored stylesheets to make it easier to [grok](https://www.merriam-webster.com/dictionary/grok).
-- Added a dark theme and toggle.
-- Added new footer navigation.
-- Created a custom GitHub Action to deploy Zola sites faster than any other GitHub Actions without using Docker.
-- Refined page transitions from desktop to mobile and viceversa.
-- Centralized custom variables to make it easier to customize the site's colors.
-- Addressed PR [#7](https://github.com/aaranxu/tale-zola/pull/7) fixing the pagination problem present in the original Zola theme.
-- Addressed Issue [#4](https://github.com/aaranxu/tale-zola/issues/4) fixing custom text not being used correctly.
-- Addressed (temporarily) Issue [#1](https://github.com/aaranxu/tale-zola/issues/1) by removing the erroneous pinned marker.
-- Optimized for speed and accessibility. Subtle color changes to make the text more readable, etc.
-- Many other small improvements eventually resulting in a perfect [PageSpeed Insights](https://developers.google.com/speed/docs/insights/v5/about) score:
-
-<div align=center>
+<div align="center">
 
 | ![PageSpeed Insights Results](./pagespeed-results.svg) |
 | --- |
 
 </div>
 
-## 🚀 Quick Start
+## 🚀 快速开始
 
-Before using the theme, you need to install [Zola](https://www.getzola.org/documentation/getting-started/installation/) ≥ v0.22.1. After which you'll need to:
-
-1. Clone the repository:
+需要安装 [Zola](https://www.getzola.org/documentation/getting-started/installation/) ≥ v0.22.1
 
 ```bash
 git clone git@github.com:kavevr/mabuya.git
-```
-
-2. Change directory into new cloned repository:
-
-```bash
 cd mabuya
-```
-
-3. Serve the site locally:
-
-```bash
 zola serve
 ```
 
-For more detailed instructions, visit the [documentation](https://www.getzola.org/documentation/themes/installing-and-using-themes/) page about installing and using themes.
+详见 [Zola 主题文档](https://www.getzola.org/documentation/themes/installing-and-using-themes/)
 
-## 🎨 Customization
+## 🎨 自定义
 
-You can change the configuration, templates and content yourself. Refer to the [zola.toml](zola.toml), and [templates](templates) for ideas. In most cases you only need to modify the contents of [zola.toml](zola.toml) to customize the appearance of your blog. Make sure to visit the [Zola Documentation](https://www.getzola.org/documentation/).
+修改 `zola.toml` 和 `templates` 文件夹来自定义配置和模板。
 
-Adding custom CSS is as easy as adding your styles to [sass/_custom.scss](sass/_custom.scss). This is made possible because SCSS files are backwards compatible with CSS. This means you can type normal CSS code into a SCSS file and it will be valid.
+自定义 CSS 只需编辑 `sass/_custom.scss` 文件即可。
 
-## 🔄 Workflows
+## 🚩 问题反馈
 
-### 🔨 Build only
+使用 [GitHub Issues](https://github.com/kavevr/mabuya/issues) 报告问题。
 
-```yml
-steps:
-  - name: Checkout
-    uses: actions/checkout@v4
-  - name: Install Zola
-    uses: taiki-e/install-action@zola
-  - name: Build Zola
-    run: zola check --drafts
-    env:
-      BUILD_ONLY: true
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-```
+## 🤝 参与贡献
 
-### 📢 Deployment
+欢迎贡献！请查看 [CONTRIBUTING](./CONTRIBUTING.md) 和 [Code of Conduct](.github/CODE_OF_CONDUCT.md)。
 
-```yml
-steps:
-  - name: Checkout
-    uses: actions/checkout@v4
-  - name: Install Zola
-    uses: taiki-e/install-action@zola
-  - name: Build site
-    run: zola build
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  - name: Upload site artifact
-    uses: actions/upload-pages-artifact@v3
-    with:
-      path: public
-  - name: Deploy to GitHub Pages
-    id: deployment
-    uses: actions/deploy-pages@v4
-```
+## 💜 致谢
 
-## 🚩 Reporting Issues
+Mabuya 基于 [@semanticdata](https://github.com/semanticdata) 的 [Mabuya](https://github.com/semanticdata/mabuya) 项目，该项目源自 [Tale](https://github.com/aaranxu/tale-zola)。
 
-We use GitHub Issues as the official bug tracker for **Mabuya**. Please search [existing issues](https://github.com/kavevr/mabuya/issues). It's possible someone has already reported the same problem. If your problem or idea is not addressed yet, open a new issue.
+图标由 [UXWing](https://uxwing.com/license/) 提供。
 
-## 🤝 Contributing
+## ©️ 许可证
 
-We'd love your help! Please see [CONTRIBUTING](./CONTRIBUTING.md) and our [Code of Conduct](.github/CODE_OF_CONDUCT.md) before submitting a Pull Request.
+基于 [MIT License](./LICENSE) 开源
 
-## 💜 Acknowledgements
-
-Mabuya is a *fork* of [Mabuya](https://github.com/semanticdata/mabuya) by [@semanticdata](https://github.com/semanticdata), which itself is a *fork* of [Tale](https://github.com/aaranxu/tale-zola) by [@aaranxu](https://github.com/aaranxu). The original [Tale](https://github.com/chesterhow/tale) Jekyll theme is now archived.
-
-The icons used throughout the site are kindly provided by [UXWing](https://uxwing.com/license/). Read their [license](https://uxwing.com/license/).
-
-## ©️ License
-
-Source code in this repository is available under the [MIT License](./LICENSE).
-
-[^1]: *Mabuya hispaniolae*'s conservation status is *Critically endangered, possibly extinct*.
+**Copyright (c) 2023 aaranxu, 2023-2025 semanticdata, 2026 kavevr**
