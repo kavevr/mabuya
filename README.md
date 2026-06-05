@@ -1,9 +1,9 @@
 <div align="center">
 <h1>🦎 Mabuya</h1>
-  <img src="https://img.shields.io/github/languages/code-size/kavevr/mabuya" />
-  <img src="https://img.shields.io/github/repo-size/kavevr/mabuya" />
-  <img src="https://img.shields.io/github/commit-activity/t/kavevr/mabuya" />
-  <img src="https://img.shields.io/github/last-commit/kavevr/mabuya" />
+  <img src="https://img.shields.io/badge/Language-Markdown-blue" />
+  <img src="https://img.shields.io/badge/Size-2.3%20MB-green" />
+  <img src="https://img.shields.io/badge/License-MIT-orange" />
+  <img src="https://img.shields.io/badge/Status-Active-brightgreen" />
   <img src="https://img.shields.io/website/https/mabuya.vercel.app.svg" />
 <br />
 
@@ -34,14 +34,6 @@
 - 添加深色主题和切换功能
 - 完整的响应式设计
 - 性能优化与无障碍支持
-- 完美的 [PageSpeed Insights](https://developers.google.com/speed/docs/insights/v5/about) 评分
-
-<div align="center">
-
-| ![PageSpeed Insights Results](./pagespeed-results.svg) |
-| --- |
-
-</div>
 
 ## 🚀 快速开始
 
@@ -78,5 +70,3 @@ Mabuya 基于 [@semanticdata](https://github.com/semanticdata) 的 [Mabuya](http
 ## ©️ 许可证
 
 基于 [MIT License](./LICENSE) 开源
-
-**Copyright (c) 2023 aaranxu, 2023-2025 semanticdata, 2026 kavevr**
